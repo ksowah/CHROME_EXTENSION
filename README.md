@@ -1,0 +1,2 @@
+# CHROME_EXTENSION
+This JavaScript application is a Chrome ( or web ) extension that tracks and saves the URL of webpages visited. To install this extension, open the extensions tab on your browser ( or use : chrome://extensions). Next, make sure "developer mode" is turned on (It may be at the top right corner of the page depending on your browser). Next, click "load unpacked", which will open a directory where you can select the folder containing the source files.
