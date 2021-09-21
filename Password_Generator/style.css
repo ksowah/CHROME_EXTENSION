@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: 	#BDC3C7;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content:left;
+    padding: 10px;
+}
+
+.pw-container{
+    min-width: 400px;
+    background-color: #7F8C8D;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pw-header{
+    padding: 1rem;
+}
+
+.pw{
+    background-color: #95A5A6;
+    height: 70px;
+    width: 100%  ;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.pw-button{
+    background-color: #000;
+    color: #fff;
+    padding: 0.25rem;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 20%);
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    font-weight: bold;
+    
+}
+
+span :hover button{
+    opacity: 1;
+}
+
+.pw-body{
+    padding: 0 1rem 1rem;
+}
+
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    color: #eee;
+    margin: 0.75rem 0;
+}
+
+.generate{
+    background-color: #34495E;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    cursor: pointer;
+}
