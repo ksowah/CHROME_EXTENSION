@@ -5,6 +5,7 @@ const list = document.getElementById("ul");
 const delBtn = document.getElementById("del");
 const tabBtn = document.getElementById("tab-btn");
 
+/* the stringified array stored in local storage is parded back as an actual array*/
 const mySavedFromLocalStorage = JSON.parse(localStorage.getItem("mySaved"))
 
 if(mySavedFromLocalStorage){
@@ -12,6 +13,7 @@ if(mySavedFromLocalStorage){
     render(mySaved);
 }
 
+// saves input in array
 function render(saved){
     let itmes = "";
     for(let i = 0; i < saved.length; i++){
@@ -25,20 +27,24 @@ function render(saved){
         list.innerHTML = itmes;
     }
 
+// onclick, input is saved
 saveBtn.addEventListener("click", function(){
     mySaved.push(myInput.value)
     myInput.value = "";
+    /* the array elements are stored in local storage as a string*/
     localStorage.setItem("mySaved", JSON.stringify(mySaved))
 
       render(mySaved);
 })
 
+// Button to delete elements 
 delBtn.addEventListener("click", function(){
     localStorage.clear();
     mySaved = [];
     render(mySaved)
 })
 
+// function that gets the url of active tab
 tabBtn.addEventListener("click", function(){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         console.log(tabs[0].url)
